@@ -1,0 +1,22 @@
+[package]
+name = "wallhaven-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Domain, provider, services, storage, and configuration for Wallhaven Desktop; independent from Dioxus."
+
+[dependencies]
+async-trait.workspace = true
+dirs.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+rusqlite = { version = "0.40", default-features = false, features = ["modern_sqlite"] }
+[dev-dependencies]
+tokio = { workspace = true }
+wiremock = "0.6"
